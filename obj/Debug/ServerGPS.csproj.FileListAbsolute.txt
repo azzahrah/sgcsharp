@@ -1,0 +1,14 @@
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\ServerGPS.csprojResolveAssemblyReference.cache
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\EpServerEngineSampleServer.FrmSampleServer.resources
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\EpServerEngineSampleServer.Properties.Resources.resources
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\ServerGPS.csproj.GenerateResource.Cache
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpServerEngineSampleServer.exe.config
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpServerEngineSampleServer.exe
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpServerEngineSampleServer.pdb
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpLibrary.cs.dll
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpServerEngine.cs.dll
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpLibrary.cs.pdb
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\EpServerEngine.cs.pdb
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\EpServerEngineSampleServer.exe
+D:\projects\c#\ServerGps\v1.0.0\obj\Debug\EpServerEngineSampleServer.pdb
+D:\projects\c#\ServerGps\v1.0.0\bin\Debug\ServerGps.exe.config
