@@ -1,0 +1,5 @@
+D:\projects\c#\ServerGps\v1.0.0\EpLibrary.cs\EpLibrary.cs\bin\Debug\EpLibrary.cs.dll
+D:\projects\c#\ServerGps\v1.0.0\EpLibrary.cs\EpLibrary.cs\bin\Debug\EpLibrary.cs.pdb
+D:\projects\c#\ServerGps\v1.0.0\EpLibrary.cs\EpLibrary.cs\obj\Debug\EpLibrary.cs.csprojResolveAssemblyReference.cache
+D:\projects\c#\ServerGps\v1.0.0\EpLibrary.cs\EpLibrary.cs\obj\Debug\EpLibrary.cs.dll
+D:\projects\c#\ServerGps\v1.0.0\EpLibrary.cs\EpLibrary.cs\obj\Debug\EpLibrary.cs.pdb
