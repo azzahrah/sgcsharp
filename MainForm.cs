@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EpServerEngine.cs;
 using System.Diagnostics;
+using ServerGps.Tools;
+using ServerGps.Protocol;
 
 namespace ServerGps
 {
@@ -187,6 +189,16 @@ namespace ServerGps
             byte[] bytes = new byte[str.Length * sizeof(char)];
             System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
             return bytes;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            byte[] bytes = Tools.Tools.GetBytesFromHexString(Samples.loginhex.Replace(" ",""));
+
+            GT06Decoder gt = new GT06Decoder();
+            gt.ParseData(bytes);
+           //Console.WriteLine(bytes[0] +" "+ bytes[1]);
+            
         }
     }
 }

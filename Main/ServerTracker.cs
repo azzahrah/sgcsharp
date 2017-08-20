@@ -5,24 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 using EpServerEngine.cs;
 using ServerGps.Model;
+using System.Threading;
+using System.Collections.Concurrent;
 namespace ServerGps.Main
 {
     public class ServerTracker : INetworkServerAcceptor, INetworkServerCallback, INetworkSocketCallback
     {
         INetworkServer m_server;
-        IProtocolGps protocol;
+        IGPSDecoder protocol;
         ServerOption option;
-        List<ClientInfo> clients;
+        ClientLiveChecker clientChecker;
+
+        /*
+         * Client Checker every 10 second, ping, check if response available
+         * Send command, and wait response for x second
+         */
+
+        Thread thClientChecker;
+
+       // List<ClientInfo> clients;
+        Dictionary<INetworkSocket, ClientInfo> clients;
+
+        ConcurrentQueue<PacketClient> queues;
         public ServerTracker(ServerOption option)
         {
             this.option = option;
             m_server = new IocpTcpServer();
-            clients = new List<ClientInfo>();            
+            queues = new ConcurrentQueue<PacketClient>();
+            clients = new Dictionary<INetworkSocket, ClientInfo>();  
         }
 
         public void start()
         {
-            ServerOps ops = new ServerOps(this, option.port, this);
+            ServerOps ops = new ServerOps( this, option.port, this);
             m_server.StartServer(ops);
         }
 
@@ -34,7 +49,7 @@ namespace ServerGps.Main
 
         //INetworkServerAcceptor
         public bool OnAccept(INetworkServer server, IPInfo ipInfo)
-        {
+        {            
             return true;
         }
 
@@ -65,12 +80,17 @@ namespace ServerGps.Main
 
         public void OnNewConnection(INetworkSocket socket)
         {
-            //throw new NotImplementedException();
+            //if (!clients.ContainsKey(socket))
+            //{
+            //    ClientInfo client = new ClientInfo();
+            //    clients.Add(socket,client);
+            //}
         }
 
         public void OnReceived(INetworkSocket socket, Packet receivedPacket)
         {
-            //throw new NotImplementedException();
+            PacketClient pc = new PacketClient(socket,receivedPacket);
+            queues.Enqueue(pc);
         }
 
         public void OnSent(INetworkSocket socket, SendStatus status, Packet sentPacket)

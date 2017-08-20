@@ -34,6 +34,7 @@
             this.tbSend = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.tbReceived = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbPort
@@ -97,18 +98,29 @@
             this.tbReceived.Size = new System.Drawing.Size(216, 121);
             this.tbReceived.TabIndex = 7;
             // 
-            // SampleServer
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(105, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 262);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbReceived);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.tbSend);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbPort);
-            this.Name = "SampleServer";
+            this.Name = "MainForm";
             this.Text = "SampleServer";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,6 +135,7 @@
         private System.Windows.Forms.TextBox tbSend;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox tbReceived;
+        private System.Windows.Forms.Button button1;
     }
 }
 

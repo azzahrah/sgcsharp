@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpServerEngineSampleServer
+namespace ServerGps
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace EpServerEngineSampleServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSampleServer());
+            Application.Run(new MainForm());
         }
     }
 }

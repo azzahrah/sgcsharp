@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ServerGps.Main
 {
-    class ServerOption
+    public class ServerOption
     {
         public string port { set; get; }
         public int timeoutIncoming { set; get; }
         public int timeoutOutgoing { set; get; }
         public int timeoutBoth { set; get; }
-        public IProtocolGps protocol { set; get; }
+        public IGPSDecoder protocol { set; get; }
         public ServerOption()
         {
 

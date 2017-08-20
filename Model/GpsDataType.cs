@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServerGps.Model
 {
-    class GpsDataType
+    public class GpsDataType
     {
     }
 }
